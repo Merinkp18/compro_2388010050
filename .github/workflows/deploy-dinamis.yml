@@ -58,6 +58,17 @@ jobs:
           target: "/home/ubuntu/container-dinamis"
           strip_components: 1
 
+      - name: Debug AWS Secrets
+        run: |
+          echo "HOST=${{ secrets.AWS_HOST }}"
+          echo "USERNAME=${{ secrets.AWS_USERNAME }}"
+          
+          if [ -z "${{ secrets.AWS_PRIVATE_KEY }}" ]; then
+            echo "KEY EMPTY"
+          else
+            echo "KEY EXISTS"
+          fi
+
       - name: Deploy Web Dinamis via SSH and run docker compose
         uses: appleboy/ssh-action@master
         with:
