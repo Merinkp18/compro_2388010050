@@ -30,8 +30,8 @@ services:
       DB_PASSWORD: 12345
       DB_NAME: dbcompro
       DB_HOST: db-webdinamis
-      NEXTAUTH_SECRET=ganti-dengan-string-acak-panjang-minimal-32-karakter
-      NEXTAUTH_URL=http://13.210.225.46:3000//
+      NEXTAUTH_SECRET: Sganti-dengan-string-acak-panjang-minimal-32-karakter
+      NEXTAUTH_URL: http://13.210.225.46:3000//
     depends_on:
       - db-webdinamis
 
